@@ -1,0 +1,118 @@
+{
+  "name": "retro-themes",
+  "displayName": "Retro Themes",
+  "description": "15 color themes inspired by classic computers and operating systems — C64, Amiga, Atari ST, IBM Terminal, NeXTSTEP, BeOS, Ubuntu, macOS, Windows XP, MS-DOS, Plan 9, Solaris CDE, OS/2 Warp, openSUSE, Linux Mint.",
+  "version": "0.1.0",
+  "publisher": "michaelblaess",
+  "author": {
+    "name": "Michael Blaess"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaelblaess/vscode-retro-themes"
+  },
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "retro",
+    "c64",
+    "amiga",
+    "atari",
+    "ibm",
+    "nextstep",
+    "beos",
+    "ubuntu",
+    "macos",
+    "msdos",
+    "plan9",
+    "os2",
+    "opensuse",
+    "linux-mint",
+    "color-theme"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Retro — C64",
+        "uiTheme": "vs-dark",
+        "path": "./themes/c64.json"
+      },
+      {
+        "label": "Retro — Amiga Workbench",
+        "uiTheme": "vs-dark",
+        "path": "./themes/amiga.json"
+      },
+      {
+        "label": "Retro — Atari ST GEM",
+        "uiTheme": "vs",
+        "path": "./themes/atari-st.json"
+      },
+      {
+        "label": "Retro — IBM Terminal",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ibm-terminal.json"
+      },
+      {
+        "label": "Retro — NeXTSTEP",
+        "uiTheme": "vs-dark",
+        "path": "./themes/nextstep.json"
+      },
+      {
+        "label": "Retro — BeOS",
+        "uiTheme": "vs-dark",
+        "path": "./themes/beos.json"
+      },
+      {
+        "label": "Retro — Ubuntu",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ubuntu.json"
+      },
+      {
+        "label": "Retro — macOS",
+        "uiTheme": "vs",
+        "path": "./themes/macos.json"
+      },
+      {
+        "label": "Retro — Windows XP",
+        "uiTheme": "vs-dark",
+        "path": "./themes/windows-xp.json"
+      },
+      {
+        "label": "Retro — MS-DOS",
+        "uiTheme": "vs-dark",
+        "path": "./themes/msdos.json"
+      },
+      {
+        "label": "Retro — Plan 9",
+        "uiTheme": "vs",
+        "path": "./themes/plan9.json"
+      },
+      {
+        "label": "Retro — Solaris CDE",
+        "uiTheme": "vs-dark",
+        "path": "./themes/solaris-cde.json"
+      },
+      {
+        "label": "Retro — OS/2 Warp",
+        "uiTheme": "vs-dark",
+        "path": "./themes/os2-warp.json"
+      },
+      {
+        "label": "Retro — openSUSE",
+        "uiTheme": "vs-dark",
+        "path": "./themes/opensuse.json"
+      },
+      {
+        "label": "Retro — Linux Mint",
+        "uiTheme": "vs-dark",
+        "path": "./themes/linux-mint.json"
+      }
+    ]
+  }
+}
