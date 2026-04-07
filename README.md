@@ -32,27 +32,26 @@
 
 ## Installation
 
-### From VSIX (local)
+### From VSIX
 
 ```bash
-code --install-extension retro-themes-0.1.0.vsix
+# Build VSIX
+npx @vscode/vsce package --no-dependencies
+
+# Install
+code --install-extension retro-themes-0.2.0.vsix
 ```
 
 ### From source
 
-1. Clone this repo into your VS Code extensions folder:
-
 ```bash
-# Windows
-git clone https://github.com/michaelblaess/vscode-retro-themes.git "%USERPROFILE%\.vscode\extensions\retro-themes"
-
-# Linux / macOS
-git clone https://github.com/michaelblaess/vscode-retro-themes.git ~/.vscode/extensions/retro-themes
+git clone https://github.com/michaelblaess/vscode-retro-themes.git
+cd vscode-retro-themes
+npx @vscode/vsce package --no-dependencies
+code --install-extension retro-themes-0.2.0.vsix
 ```
 
-2. Restart VS Code
-3. Open Command Palette (`Ctrl+Shift+P`) and select **Preferences: Color Theme**
-4. Choose any theme starting with **Retro —**
+After installation, open Command Palette (`Ctrl+Shift+P`) and select **Preferences: Color Theme**, then choose any theme starting with **Retro —**.
 
 ## Color Palette
 
