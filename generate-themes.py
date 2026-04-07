@@ -452,6 +452,21 @@ THEMES = [
         "foreground": "#E8E8E8", "background": "#2B2B2B", "surface": "#363636",
         "panel": "#232323", "warning": "#E5A50A", "error": "#CC3333", "success": "#8BB158",
     }),
+    ("red-hat", "Retro — Red Hat", True, {
+        "primary": "#CC0000", "secondary": "#A30000", "accent": "#EE0000",
+        "foreground": "#E0E0E0", "background": "#1A0A0A", "surface": "#2A1515",
+        "panel": "#140808", "warning": "#EEA500", "error": "#FF4444", "success": "#44AA44",
+    }),
+    ("raspberry-pi", "Retro — Raspberry Pi", True, {
+        "primary": "#C51A4A", "secondary": "#6CC24A", "accent": "#C51A4A",
+        "foreground": "#EEEEEE", "background": "#1E1E2E", "surface": "#2A2A3A",
+        "panel": "#181828", "warning": "#E5A50A", "error": "#DD3333", "success": "#6CC24A",
+    }),
+    ("freebsd", "Retro — FreeBSD", True, {
+        "primary": "#AB2B28", "secondary": "#5E8AAA", "accent": "#AB2B28",
+        "foreground": "#D4D4D4", "background": "#1C2028", "surface": "#262A32",
+        "panel": "#161A20", "warning": "#CC9933", "error": "#DD4444", "success": "#55AA66",
+    }),
 ]
 
 

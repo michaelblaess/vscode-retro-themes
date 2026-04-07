@@ -1,8 +1,8 @@
 {
   "name": "retro-themes",
   "displayName": "Retro Themes",
-  "description": "15 color themes inspired by classic computers and operating systems — C64, Amiga, Atari ST, IBM Terminal, NeXTSTEP, BeOS, Ubuntu, macOS, Windows XP, MS-DOS, Plan 9, Solaris CDE, OS/2 Warp, openSUSE, Linux Mint.",
-  "version": "0.1.0",
+  "description": "18 color themes inspired by classic computers and operating systems — C64, Amiga, Atari ST, IBM Terminal, NeXTSTEP, BeOS, Ubuntu, macOS, Windows XP, MS-DOS, Plan 9, Solaris CDE, OS/2 Warp, openSUSE, Linux Mint, Red Hat, Raspberry Pi, FreeBSD.",
+  "version": "0.2.0",
   "publisher": "michaelblaess",
   "author": {
     "name": "Michael Blaess"
@@ -112,6 +112,21 @@
         "label": "Retro — Linux Mint",
         "uiTheme": "vs-dark",
         "path": "./themes/linux-mint.json"
+      },
+      {
+        "label": "Retro — Red Hat",
+        "uiTheme": "vs-dark",
+        "path": "./themes/red-hat.json"
+      },
+      {
+        "label": "Retro — Raspberry Pi",
+        "uiTheme": "vs-dark",
+        "path": "./themes/raspberry-pi.json"
+      },
+      {
+        "label": "Retro — FreeBSD",
+        "uiTheme": "vs-dark",
+        "path": "./themes/freebsd.json"
       }
     ]
   }
