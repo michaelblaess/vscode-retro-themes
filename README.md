@@ -1,6 +1,6 @@
 # Retro Themes for VS Code
 
-15 color themes inspired by classic computers and operating systems.
+18 color themes inspired by classic computers and operating systems.
 
 ## Dark Themes
 
@@ -18,6 +18,9 @@
 | **openSUSE** | openSUSE Linux | Dark green with white |
 | **Solaris CDE** | Sun CDE Desktop (1993) | Slate gray with warm accents |
 | **Linux Mint** | Cinnamon Desktop | Warm mint-green on charcoal |
+| **Red Hat** | Red Hat Linux | Shadowman red on dark |
+| **Raspberry Pi** | Raspberry Pi OS | Raspberry red on dark blue-gray |
+| **FreeBSD** | FreeBSD | Beastie red on dark slate |
 
 ## Light Themes
 
