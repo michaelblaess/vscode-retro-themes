@@ -1,8 +1,8 @@
 {
   "name": "retro-themes",
   "displayName": "Retro Themes",
-  "description": "18 color themes inspired by classic computers and operating systems — C64, Amiga, Atari ST, IBM Terminal, NeXTSTEP, BeOS, Ubuntu, macOS, Windows XP, MS-DOS, Plan 9, Solaris CDE, OS/2 Warp, openSUSE, Linux Mint, Red Hat, Raspberry Pi, FreeBSD.",
-  "version": "0.2.0",
+  "description": "31 retro color themes for VS Code — vintage 8-bit, terminal, Unix workstation, watch, comic-pulp and 80s-pastel palettes. Mirror of the textual-themes Python package.",
+  "version": "1.0.0",
   "publisher": "michaelblaess",
   "author": {
     "name": "Michael Blaess"
@@ -21,113 +21,47 @@
   "keywords": [
     "theme",
     "retro",
-    "c64",
-    "amiga",
-    "atari",
-    "ibm",
-    "nextstep",
-    "beos",
-    "ubuntu",
-    "macos",
-    "msdos",
-    "plan9",
-    "os2",
-    "opensuse",
-    "linux-mint",
+    "vintage",
+    "terminal",
+    "phosphor",
+    "8-bit",
+    "synthwave",
+    "pastel",
     "color-theme"
   ],
   "contributes": {
     "themes": [
-      {
-        "label": "Retro — C64",
-        "uiTheme": "vs-dark",
-        "path": "./themes/c64.json"
-      },
-      {
-        "label": "Retro — Amiga Workbench",
-        "uiTheme": "vs-dark",
-        "path": "./themes/amiga.json"
-      },
-      {
-        "label": "Retro — Atari ST GEM",
-        "uiTheme": "vs",
-        "path": "./themes/atari-st.json"
-      },
-      {
-        "label": "Retro — IBM Terminal",
-        "uiTheme": "vs-dark",
-        "path": "./themes/ibm-terminal.json"
-      },
-      {
-        "label": "Retro — NeXTSTEP",
-        "uiTheme": "vs-dark",
-        "path": "./themes/nextstep.json"
-      },
-      {
-        "label": "Retro — BeOS",
-        "uiTheme": "vs-dark",
-        "path": "./themes/beos.json"
-      },
-      {
-        "label": "Retro — Ubuntu",
-        "uiTheme": "vs-dark",
-        "path": "./themes/ubuntu.json"
-      },
-      {
-        "label": "Retro — macOS",
-        "uiTheme": "vs",
-        "path": "./themes/macos.json"
-      },
-      {
-        "label": "Retro — Windows XP",
-        "uiTheme": "vs-dark",
-        "path": "./themes/windows-xp.json"
-      },
-      {
-        "label": "Retro — MS-DOS",
-        "uiTheme": "vs-dark",
-        "path": "./themes/msdos.json"
-      },
-      {
-        "label": "Retro — Plan 9",
-        "uiTheme": "vs",
-        "path": "./themes/plan9.json"
-      },
-      {
-        "label": "Retro — Solaris CDE",
-        "uiTheme": "vs-dark",
-        "path": "./themes/solaris-cde.json"
-      },
-      {
-        "label": "Retro — OS/2 Warp",
-        "uiTheme": "vs-dark",
-        "path": "./themes/os2-warp.json"
-      },
-      {
-        "label": "Retro — openSUSE",
-        "uiTheme": "vs-dark",
-        "path": "./themes/opensuse.json"
-      },
-      {
-        "label": "Retro — Linux Mint",
-        "uiTheme": "vs-dark",
-        "path": "./themes/linux-mint.json"
-      },
-      {
-        "label": "Retro — Red Hat",
-        "uiTheme": "vs-dark",
-        "path": "./themes/red-hat.json"
-      },
-      {
-        "label": "Retro — Raspberry Pi",
-        "uiTheme": "vs-dark",
-        "path": "./themes/raspberry-pi.json"
-      },
-      {
-        "label": "Retro — FreeBSD",
-        "uiTheme": "vs-dark",
-        "path": "./themes/freebsd.json"
-      }
+      { "label": "Retro — Brotkasten",       "uiTheme": "vs-dark", "path": "./themes/brotkasten.json" },
+      { "label": "Retro — Boing",            "uiTheme": "vs-dark", "path": "./themes/boing.json" },
+      { "label": "Retro — Gemstone",         "uiTheme": "vs",      "path": "./themes/gemstone.json" },
+      { "label": "Retro — Classic Terminal", "uiTheme": "vs-dark", "path": "./themes/classic-terminal.json" },
+      { "label": "Retro — Next",             "uiTheme": "vs-dark", "path": "./themes/next.json" },
+      { "label": "Retro — BeBox",            "uiTheme": "vs-dark", "path": "./themes/bebox.json" },
+      { "label": "Retro — Bunty",            "uiTheme": "vs-dark", "path": "./themes/bunty.json" },
+      { "label": "Retro — Cupertino",        "uiTheme": "vs",      "path": "./themes/cupertino.json" },
+      { "label": "Retro — Luna",             "uiTheme": "vs-dark", "path": "./themes/luna.json" },
+      { "label": "Retro — Commandr",         "uiTheme": "vs-dark", "path": "./themes/commandr.json" },
+      { "label": "Retro — Plan 9",           "uiTheme": "vs",      "path": "./themes/plan9.json" },
+      { "label": "Retro — Motif",            "uiTheme": "vs-dark", "path": "./themes/motif.json" },
+      { "label": "Retro — Warp",             "uiTheme": "vs-dark", "path": "./themes/warp.json" },
+      { "label": "Retro — Geeko",            "uiTheme": "vs-dark", "path": "./themes/geeko.json" },
+      { "label": "Retro — Minty",            "uiTheme": "vs-dark", "path": "./themes/minty.json" },
+      { "label": "Retro — Crimson",          "uiTheme": "vs-dark", "path": "./themes/crimson.json" },
+      { "label": "Retro — Razzy",            "uiTheme": "vs-dark", "path": "./themes/razzy.json" },
+      { "label": "Retro — Beastie",          "uiTheme": "vs-dark", "path": "./themes/beastie.json" },
+      { "label": "Retro — Fifty-Eight",      "uiTheme": "vs-dark", "path": "./themes/fifty-eight.json" },
+      { "label": "Retro — Bluesy",           "uiTheme": "vs-dark", "path": "./themes/bluesy.json" },
+      { "label": "Retro — Goldfinder",       "uiTheme": "vs-dark", "path": "./themes/goldfinder.json" },
+      { "label": "Retro — Hulkula",          "uiTheme": "vs-dark", "path": "./themes/hulkula.json" },
+      { "label": "Retro — Flughund",         "uiTheme": "vs-dark", "path": "./themes/flughund.json" },
+      { "label": "Retro — Classic Navy",     "uiTheme": "vs-dark", "path": "./themes/classic-navy.json" },
+      { "label": "Retro — Brick",            "uiTheme": "vs",      "path": "./themes/brick.json" },
+      { "label": "Retro — Clipper",          "uiTheme": "vs",      "path": "./themes/clipper.json" },
+      { "label": "Retro — Synthwave",        "uiTheme": "vs-dark", "path": "./themes/synthwave.json" },
+      { "label": "Retro — Miami",            "uiTheme": "vs-dark", "path": "./themes/miami.json" },
+      { "label": "Retro — Racing",           "uiTheme": "vs-dark", "path": "./themes/racing.json" },
+      { "label": "Retro — Metropolis",       "uiTheme": "vs-dark", "path": "./themes/metropolis.json" },
+      { "label": "Retro — Spiderized",       "uiTheme": "vs-dark", "path": "./themes/spiderized.json" }
     ]
   }
 }

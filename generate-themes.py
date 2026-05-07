@@ -1,7 +1,11 @@
 """Generiert VS Code Theme-Dateien aus den textual-themes Farbpaletten.
 
 Einmalig ausfuehren: python generate-themes.py
-Erzeugt 15 JSON-Dateien im themes/ Ordner.
+Erzeugt JSON-Dateien im themes/ Ordner.
+
+Die Theme-Slugs, Display-Namen und Farbwerte sind 1:1 die der
+textual-themes Library — einmal Pinsel anfassen, beide Welten
+bekommen das gleiche Bild.
 """
 import json
 import os
@@ -217,7 +221,6 @@ def build_theme(name: str, display_name: str, colors: dict, dark: bool) -> dict:
 def build_token_colors(fg, accent, primary, secondary, warning, error, success,
                        comment_color, dark):
     """Baut Syntax-Highlighting Token-Farben."""
-    # Syntax-Farben aus der Palette ableiten
     keyword = accent
     string_color = success
     number_color = warning
@@ -374,111 +377,195 @@ def build_token_colors(fg, accent, primary, secondary, warning, error, success,
     ]
 
 
-# ── Theme-Definitionen (aus textual-themes) ──────────────────────────
+# ── Theme-Definitionen (mirror von textual-themes 0.5) ────────────────
+# Reihenfolge: (slug, display_name, dark, palette)
+# palette keys: primary, secondary, accent, foreground, background,
+#               surface, panel, warning, error, success
 
 THEMES = [
-    ("c64", "Retro — C64", True, {
-        "primary": "#6C6CD6", "secondary": "#352879", "accent": "#6C6CD6",
-        "foreground": "#D0D0FF", "background": "#352879", "surface": "#423498",
-        "panel": "#2C2068", "warning": "#A87832", "error": "#CC5555", "success": "#68A941",
+    ("brotkasten", "Retro — Brotkasten", True, {
+        "primary": "#7C70DA", "secondary": "#3A2B8A", "accent": "#EDF171",
+        "foreground": "#D0CCFF", "background": "#3A2B8A", "surface": "#5446B8",
+        "panel": "#241870", "warning": "#EDF171", "error": "#C46C71", "success": "#A9FF9F",
     }),
-    ("amiga", "Retro — Amiga Workbench", True, {
+    ("boing", "Retro — Boing", True, {
         "primary": "#FF8800", "secondary": "#0055AA", "accent": "#FF8800",
         "foreground": "#FFFFFF", "background": "#0055AA", "surface": "#0066BB",
         "panel": "#004499", "warning": "#FFAA00", "error": "#FF4444", "success": "#44BB44",
     }),
-    ("atari-st", "Retro — Atari ST GEM", False, {
+    ("gemstone", "Retro — Gemstone", False, {
         "primary": "#007700", "secondary": "#555555", "accent": "#009900",
         "foreground": "#111111", "background": "#E8E8E8", "surface": "#F2F2F2",
         "panel": "#DDDDDD", "warning": "#AA8800", "error": "#CC0000", "success": "#007700",
     }),
-    ("ibm-terminal", "Retro — IBM Terminal", True, {
-        "primary": "#33FF33", "secondary": "#1A8C1A", "accent": "#33FF33",
-        "foreground": "#33FF33", "background": "#0A0A0A", "surface": "#111111",
-        "panel": "#0D0D0D", "warning": "#22BB22", "error": "#FF3333", "success": "#33FF33",
+    ("classic-terminal", "Retro — Classic Terminal", True, {
+        "primary": "#33FF33", "secondary": "#2A7A2A", "accent": "#88FF88",
+        "foreground": "#33FF33", "background": "#0A0A0A", "surface": "#162616",
+        "panel": "#0F1B0F", "warning": "#FFAA00", "error": "#FF4444", "success": "#33FF33",
     }),
-    ("nextstep", "Retro — NeXTSTEP", True, {
+    ("next", "Retro — Next", True, {
         "primary": "#9966CC", "secondary": "#555555", "accent": "#9966CC",
         "foreground": "#E0E0E0", "background": "#2A2A2A", "surface": "#3A3A3A",
         "panel": "#222222", "warning": "#CC9933", "error": "#CC4444", "success": "#44AA44",
     }),
-    ("beos", "Retro — BeOS", True, {
+    ("bebox", "Retro — BeBox", True, {
         "primary": "#FFD800", "secondary": "#5F5F5F", "accent": "#FFD800",
         "foreground": "#E8E8E8", "background": "#3A3A4A", "surface": "#4A4A5A",
         "panel": "#333344", "warning": "#FF9900", "error": "#DD3333", "success": "#33BB33",
     }),
-    ("ubuntu", "Retro — Ubuntu", True, {
-        "primary": "#E95420", "secondary": "#4A1942", "accent": "#E95420",
-        "foreground": "#EEEEEE", "background": "#300A24", "surface": "#3B1530",
-        "panel": "#280820", "warning": "#F99B11", "error": "#DF382C", "success": "#38B44A",
+    ("bunty", "Retro — Bunty", True, {
+        "primary": "#DD4814", "secondary": "#77216F", "accent": "#E18B5C",
+        "foreground": "#F2EAEA", "background": "#2C001E", "surface": "#4A2540",
+        "panel": "#1F0014", "warning": "#F99B11", "error": "#DF382C", "success": "#38B44A",
     }),
-    ("macos", "Retro — macOS", False, {
+    ("cupertino", "Retro — Cupertino", False, {
         "primary": "#007AFF", "secondary": "#5856D6", "accent": "#007AFF",
         "foreground": "#1D1D1F", "background": "#F5F5F7", "surface": "#FFFFFF",
         "panel": "#E8E8ED", "warning": "#FF9500", "error": "#FF3B30", "success": "#34C759",
     }),
-    ("windows-xp", "Retro — Windows XP", True, {
+    ("luna", "Retro — Luna", True, {
         "primary": "#0054E3", "secondary": "#21A121", "accent": "#0054E3",
         "foreground": "#FFFFFF", "background": "#003399", "surface": "#0044AA",
         "panel": "#002D8A", "warning": "#FFCC00", "error": "#E81123", "success": "#21A121",
     }),
-    ("msdos", "Retro — MS-DOS", True, {
-        "primary": "#00AAAA", "secondary": "#AAAA00", "accent": "#FFFF55",
-        "foreground": "#AAAAAA", "background": "#0000AA", "surface": "#0000BB",
-        "panel": "#000088", "warning": "#AAAA00", "error": "#FF5555", "success": "#55FF55",
+    ("commandr", "Retro — Commandr", True, {
+        "primary": "#FFFF55", "secondary": "#55FFFF", "accent": "#FFFF55",
+        "foreground": "#FFFFFF", "background": "#0000AA", "surface": "#1A1ACC",
+        "panel": "#000077", "warning": "#FFAA00", "error": "#FF5555", "success": "#55FF55",
     }),
     ("plan9", "Retro — Plan 9", False, {
         "primary": "#228844", "secondary": "#4488AA", "accent": "#228844",
         "foreground": "#111111", "background": "#FFFFEA", "surface": "#EAFFFF",
         "panel": "#D5E8D0", "warning": "#BB8800", "error": "#CC2222", "success": "#228844",
     }),
-    ("solaris-cde", "Retro — Solaris CDE", True, {
+    ("motif", "Retro — Motif", True, {
         "primary": "#CC9966", "secondary": "#5F7B8A", "accent": "#CC9966",
         "foreground": "#D8D0C8", "background": "#3A4A5A", "surface": "#455565",
         "panel": "#303F4F", "warning": "#CCAA44", "error": "#CC5544", "success": "#55AA66",
     }),
-    ("os2-warp", "Retro — OS/2 Warp", True, {
+    ("warp", "Retro — Warp", True, {
         "primary": "#00BBBB", "secondary": "#3333AA", "accent": "#00BBBB",
         "foreground": "#D0D0D0", "background": "#1A1A4E", "surface": "#25255E",
         "panel": "#141442", "warning": "#DDAA22", "error": "#DD4444", "success": "#44BB66",
     }),
-    ("opensuse", "Retro — openSUSE", True, {
+    ("geeko", "Retro — Geeko", True, {
         "primary": "#73BA25", "secondary": "#35B9AB", "accent": "#73BA25",
         "foreground": "#EEEEEE", "background": "#173F0F", "surface": "#1E4D15",
         "panel": "#12330B", "warning": "#F0A30A", "error": "#DD3333", "success": "#73BA25",
     }),
-    ("linux-mint", "Retro — Linux Mint", True, {
+    ("minty", "Retro — Minty", True, {
         "primary": "#8BB158", "secondary": "#6DAB76", "accent": "#8BB158",
         "foreground": "#E8E8E8", "background": "#2B2B2B", "surface": "#363636",
         "panel": "#232323", "warning": "#E5A50A", "error": "#CC3333", "success": "#8BB158",
     }),
-    ("red-hat", "Retro — Red Hat", True, {
+    ("crimson", "Retro — Crimson", True, {
         "primary": "#CC0000", "secondary": "#A30000", "accent": "#EE0000",
         "foreground": "#E0E0E0", "background": "#1A0A0A", "surface": "#2A1515",
         "panel": "#140808", "warning": "#EEA500", "error": "#FF4444", "success": "#44AA44",
     }),
-    ("raspberry-pi", "Retro — Raspberry Pi", True, {
+    ("razzy", "Retro — Razzy", True, {
         "primary": "#C51A4A", "secondary": "#6CC24A", "accent": "#C51A4A",
         "foreground": "#EEEEEE", "background": "#1E1E2E", "surface": "#2A2A3A",
         "panel": "#181828", "warning": "#E5A50A", "error": "#DD3333", "success": "#6CC24A",
     }),
-    ("freebsd", "Retro — FreeBSD", True, {
+    ("beastie", "Retro — Beastie", True, {
         "primary": "#AB2B28", "secondary": "#5E8AAA", "accent": "#AB2B28",
         "foreground": "#D4D4D4", "background": "#1C2028", "surface": "#262A32",
         "panel": "#161A20", "warning": "#CC9933", "error": "#DD4444", "success": "#55AA66",
+    }),
+    ("fifty-eight", "Retro — Fifty-Eight", True, {
+        "primary": "#C9A96E", "secondary": "#6A6A6A", "accent": "#9E1B25",
+        "foreground": "#E8C985", "background": "#100C08", "surface": "#1E1914",
+        "panel": "#080605", "warning": "#C9A048", "error": "#B8252E", "success": "#6A9A5A",
+    }),
+    ("bluesy", "Retro — Bluesy", True, {
+        "primary": "#D4AF37", "secondary": "#1E4FA0", "accent": "#F0C85A",
+        "foreground": "#F5D76E", "background": "#081F54", "surface": "#0E2E6E",
+        "panel": "#04133A", "warning": "#E8A838", "error": "#DD3344", "success": "#48B870",
+    }),
+    ("goldfinder", "Retro — Goldfinder", True, {
+        "primary": "#E6B800", "secondary": "#8A6E20", "accent": "#FFD740",
+        "foreground": "#E8DFC0", "background": "#080705", "surface": "#18140A",
+        "panel": "#040302", "warning": "#E8A838", "error": "#CC4040", "success": "#5AAA5A",
+    }),
+    ("hulkula", "Retro — Hulkula", True, {
+        "primary": "#2BA841", "secondary": "#BCC4CA", "accent": "#4DC962",
+        "foreground": "#F0F2EE", "background": "#083C14", "surface": "#104B1B",
+        "panel": "#042608", "warning": "#D4A040", "error": "#CC2222", "success": "#4DC962",
+    }),
+    ("flughund", "Retro — Flughund", True, {
+        "primary": "#244B85", "secondary": "#BCC4CA", "accent": "#3D6FB8",
+        "foreground": "#F0F2F5", "background": "#060810", "surface": "#0E1422",
+        "panel": "#030509", "warning": "#D4A040", "error": "#CC3030", "success": "#50AA50",
+    }),
+    ("classic-navy", "Retro — Classic Navy", True, {
+        "primary": "#C0C5CC", "secondary": "#1E4585", "accent": "#9E3A42",
+        "foreground": "#EEF0F5", "background": "#0C2B5C", "surface": "#143465",
+        "panel": "#061A3A", "warning": "#D4A040", "error": "#B04048", "success": "#50AA50",
+    }),
+    ("brick", "Retro — Brick", False, {
+        "primary": "#8E2A5E", "secondary": "#5A4858", "accent": "#D63B68",
+        "foreground": "#241F28", "background": "#D4CEBC", "surface": "#E2DCCA",
+        "panel": "#B2AC9A", "warning": "#C85820", "error": "#A0203A", "success": "#4A7A3A",
+    }),
+    ("clipper", "Retro — Clipper", False, {
+        "primary": "#1A4FA0", "secondary": "#C61F2C", "accent": "#D4222F",
+        "foreground": "#1A1A1A", "background": "#F6F3E8", "surface": "#FCFAF0",
+        "panel": "#EBE6D4", "warning": "#C88A20", "error": "#C61F2C", "success": "#2E8B3D",
+    }),
+    ("synthwave", "Retro — Synthwave", True, {
+        "primary": "#FF2E93", "secondary": "#7B2D8E", "accent": "#05D9E8",
+        "foreground": "#F5E9FF", "background": "#1A0B3D", "surface": "#261553",
+        "panel": "#0E0524", "warning": "#FFD319", "error": "#FF3860", "success": "#39FF14",
+    }),
+    ("miami", "Retro — Miami", True, {
+        "primary": "#FF6FAB", "secondary": "#1FB8BC", "accent": "#FFA06A",
+        "foreground": "#FFE8E0", "background": "#0B2F3F", "surface": "#124050",
+        "panel": "#051825", "warning": "#FFD76B", "error": "#E63970", "success": "#4ECDA8",
+    }),
+    ("racing", "Retro — Racing", True, {
+        "primary": "#1A5CC8", "secondary": "#C0C6D0", "accent": "#E42030",
+        "foreground": "#EEF0F5", "background": "#14161E", "surface": "#1F232E",
+        "panel": "#080A10", "warning": "#E8A838", "error": "#E42030", "success": "#3AAA4A",
+    }),
+    ("metropolis", "Retro — Metropolis", True, {
+        "primary": "#E02030", "secondary": "#1A5CC8", "accent": "#FFD53B",
+        "foreground": "#F0F2F8", "background": "#0A2A5E", "surface": "#123876",
+        "panel": "#051838", "warning": "#FFD53B", "error": "#C80A18", "success": "#3AAA4A",
+    }),
+    ("spiderized", "Retro — Spiderized", True, {
+        "primary": "#D71920", "secondary": "#1F75FE", "accent": "#1F75FE",
+        "foreground": "#FFFFFF", "background": "#0E1A3A", "surface": "#1A2C5F",
+        "panel": "#070D24", "warning": "#FFA830", "error": "#C80A18", "success": "#4AA85A",
     }),
 ]
 
 
 def main() -> None:
     os.makedirs("themes", exist_ok=True)
-    for filename, display_name, dark, colors in THEMES:
-        theme = build_theme(filename, display_name, colors, dark)
-        path = os.path.join("themes", f"{filename}.json")
+
+    # Vorhandene JSON-Files in themes/ einsammeln, am Ende die jetzt
+    # nicht mehr aktiven loeschen.
+    existing = {f for f in os.listdir("themes") if f.endswith(".json")}
+    written: set[str] = set()
+
+    for slug, display_name, dark, colors in THEMES:
+        theme = build_theme(slug, display_name, colors, dark)
+        filename = f"{slug}.json"
+        path = os.path.join("themes", filename)
         with open(path, "w", encoding="utf-8") as f:
             json.dump(theme, f, indent=2, ensure_ascii=False)
-        print(f"  {path}")
-    print(f"\n{len(THEMES)} Themes generiert.")
+        written.add(filename)
+        print(f"  + {path}")
+
+    # Veraltete Theme-Files aufraeumen
+    stale = sorted(existing - written)
+    for f in stale:
+        path = os.path.join("themes", f)
+        os.remove(path)
+        print(f"  - removed {path}")
+
+    print(f"\n{len(THEMES)} Themes generiert ({len(stale)} veraltete entfernt).")
 
 
 if __name__ == "__main__":
