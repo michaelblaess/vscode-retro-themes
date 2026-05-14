@@ -1,13 +1,13 @@
 # Retro Themes for VS Code
 
-[![Stars](https://img.shields.io/github/stars/michaelblaess/vscode-retro-themes?logo=github&color=fbbf24)](https://github.com/michaelblaess/vscode-retro-themes/stargazers)
-[![Forks](https://img.shields.io/github/forks/michaelblaess/vscode-retro-themes?logo=github&color=34d399)](https://github.com/michaelblaess/vscode-retro-themes/network/members)
-[![Issues](https://img.shields.io/github/issues/michaelblaess/vscode-retro-themes?logo=github&color=f87171)](https://github.com/michaelblaess/vscode-retro-themes/issues)
-[![Pull Requests](https://img.shields.io/github/issues-pr/michaelblaess/vscode-retro-themes?logo=github&color=a78bfa)](https://github.com/michaelblaess/vscode-retro-themes/pulls)
+[![Stars](https://img.shields.io/github/stars/michaelblaess/vscode-retro-themes?logo=github&logoColor=white&color=fbbf24)](https://github.com/michaelblaess/vscode-retro-themes/stargazers)
+[![Forks](https://img.shields.io/github/forks/michaelblaess/vscode-retro-themes?logo=github&logoColor=white&color=34d399)](https://github.com/michaelblaess/vscode-retro-themes/network/members)
+[![Issues](https://img.shields.io/github/issues/michaelblaess/vscode-retro-themes?logo=github&logoColor=white&color=f87171)](https://github.com/michaelblaess/vscode-retro-themes/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/michaelblaess/vscode-retro-themes?logo=github&logoColor=white&color=a78bfa)](https://github.com/michaelblaess/vscode-retro-themes/pulls)
 
-[![Last Commit](https://img.shields.io/github/last-commit/michaelblaess/vscode-retro-themes?logo=git&color=3b82f6)](https://github.com/michaelblaess/vscode-retro-themes/commits/main)
+[![Last Commit](https://img.shields.io/github/last-commit/michaelblaess/vscode-retro-themes?logo=git&logoColor=white&color=3b82f6)](https://github.com/michaelblaess/vscode-retro-themes/commits/main)
 [![License](https://img.shields.io/badge/license-Apache_2.0-3b82f6)](LICENSE)
-[![VS Code](https://img.shields.io/badge/vscode-1.70+-3b82f6?logo=visualstudiocode)](https://code.visualstudio.com/)
+[![VS Code](https://img.shields.io/badge/vscode-1.70+-3b82f6?logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 [![Themes](https://img.shields.io/badge/themes-31-fbbf24)](themes)
 
 31 color themes for VS Code — vintage 8-bit, terminal phosphor, Unix workstation, watch, comic-pulp and 80s-pastel palettes.
