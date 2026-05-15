@@ -1,8 +1,8 @@
 # Retro Themes for VS Code
 
 <p align="center">
-  <img src="docs/flags/gb.svg" height="13" alt=""> <a href="README.md">English</a> ·
-  <img src="docs/flags/de.svg" height="13" alt=""> <b>Deutsch</b>
+  <img src="docs/flags/gb.png" height="13" alt=""> <a href="README.md">English</a> ·
+  <img src="docs/flags/de.png" height="13" alt=""> <b>Deutsch</b>
 </p>
 
 ---
@@ -15,9 +15,9 @@
 [![Last Commit](https://img.shields.io/github/last-commit/michaelblaess/vscode-retro-themes?logo=git&logoColor=white&color=3b82f6)](https://github.com/michaelblaess/vscode-retro-themes/commits/main)
 [![License](https://img.shields.io/badge/license-Apache_2.0-3b82f6)](LICENSE)
 [![VS Code](https://img.shields.io/badge/vscode-1.70+-3b82f6?logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
-[![Themes](https://img.shields.io/badge/themes-31-fbbf24)](themes)
+[![Themes](https://img.shields.io/badge/themes-38-fbbf24)](themes)
 
-31 Farb-Themes für VS Code — Paletten im Stil von Vintage-8-Bit, Terminal-Phosphor, Unix-Workstation, Armbanduhren, Comic-Pulp und 80er-Pastell.
+38 Farb-Themes für VS Code — Paletten im Stil von Vintage-8-Bit, Terminal-Phosphor, Unix-Workstation, Armbanduhren, Comic-Pulp, 80er-Pastell und Mafia-Noir.
 
 Diese Erweiterung ist ein 1:1-Abbild des Python-Pakets [textual-themes](https://github.com/michaelblaess/textual-themes) — gleiche Slugs, gleiche Anzeigenamen, gleiche Farben. So nutzt du dasselbe Theme in deinen Terminal-TUI-Apps und in deinem Editor.
 
@@ -31,7 +31,7 @@ Diese Erweiterung ist ein 1:1-Abbild des Python-Pakets [textual-themes](https://
 > den jeweiligen Markeninhabern, wird von ihnen nicht unterstützt und ist
 > nicht von ihnen lizenziert.
 
-## Dunkle Themes (26)
+## Dunkle Themes (33)
 
 | Theme | Stil |
 |-------|------|
@@ -61,6 +61,13 @@ Diese Erweiterung ist ein 1:1-Abbild des Python-Pakets [textual-themes](https://
 | **Racing** | Anthrazit mit tiefem Blau, Kirschrot und silbernen Streifen |
 | **Metropolis** | Kräftige Primärtriade aus Blau, Karminrot und Sonnengelb |
 | **Spiderized** | Rotes & königsblaues Helden-Kostüm (hoher Kontrast) |
+| **Ascot** | Le-Mans-Racing-Grün mit Signalgelb, Silber und beigem Text |
+| **Joker** | Königsviolettes Sakko, säuregrünes Haar und gelbe Weste |
+| **Marley** | Reggae-Roots-Palette: Schwarz, Grün, Gold, Rot |
+| **Lenseflare** | 80er Orange-Türkis-Bichromatik auf dämmrigem Blau |
+| **Platoon** | Gedämpftes Militär-Olivgrün mit Khaki-Akzent auf Fast-Schwarz |
+| **Corleone** | Kühles Mafia-Noir: Bronze, Stahlgrau und Asche auf bläulichem Schwarz |
+| **Golden Brown** | Warmes Mafia-Noir: Antikgold, Sepia und Pergament auf warmem Schwarz |
 
 ## Helle Themes (5)
 
@@ -80,14 +87,14 @@ Diese Erweiterung ist ein 1:1-Abbild des Python-Pakets [textual-themes](https://
 git clone https://github.com/michaelblaess/vscode-retro-themes.git
 cd vscode-retro-themes
 npx @vscode/vsce package --no-dependencies
-code --install-extension retro-themes-1.0.0.vsix
+code --install-extension retro-themes-1.0.0.vsix --force
 ```
 
 Öffne nach der Installation die Befehlspalette (`Ctrl+Shift+P`), wähle **Preferences: Color Theme** und dann ein beliebiges Theme, das mit **Retro —** beginnt.
 
 ## Themes neu generieren
 
-Die `themes/*.json`-Dateien werden aus `generate-themes.py` generiert — dieses Skript hält alle 31 Paletten an einer Stelle und gibt das VS-Code-JSON aus. Um eine Farbe anzupassen oder ein Theme hinzuzufügen: bearbeite `THEMES` im Skript, führe `python generate-themes.py` aus, und die JSON-Dateien werden direkt überschrieben (und jede veraltete Datei wird entfernt).
+Die `themes/*.json`-Dateien werden aus `generate-themes.py` generiert — dieses Skript hält alle 38 Paletten an einer Stelle und gibt das VS-Code-JSON aus. Um eine Farbe anzupassen oder ein Theme hinzuzufügen: bearbeite `THEMES` im Skript, führe `python generate-themes.py` aus, und die JSON-Dateien werden direkt überschrieben (und jede veraltete Datei wird entfernt).
 
 ```bash
 python generate-themes.py

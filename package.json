@@ -1,7 +1,7 @@
 {
   "name": "retro-themes",
   "displayName": "Retro Themes",
-  "description": "31 retro color themes for VS Code — vintage 8-bit, terminal, Unix workstation, watch, comic-pulp and 80s-pastel palettes. Mirror of the textual-themes Python package.",
+  "description": "38 retro color themes for VS Code — vintage 8-bit, terminal, Unix workstation, watch, comic-pulp, 80s-pastel and mafia-noir palettes. Mirror of the textual-themes Python package.",
   "version": "1.0.0",
   "publisher": "michaelblaess",
   "author": {
@@ -61,7 +61,14 @@
       { "label": "Retro — Miami",            "uiTheme": "vs-dark", "path": "./themes/miami.json" },
       { "label": "Retro — Racing",           "uiTheme": "vs-dark", "path": "./themes/racing.json" },
       { "label": "Retro — Metropolis",       "uiTheme": "vs-dark", "path": "./themes/metropolis.json" },
-      { "label": "Retro — Spiderized",       "uiTheme": "vs-dark", "path": "./themes/spiderized.json" }
+      { "label": "Retro — Spiderized",       "uiTheme": "vs-dark", "path": "./themes/spiderized.json" },
+      { "label": "Retro — Ascot",            "uiTheme": "vs-dark", "path": "./themes/ascot.json" },
+      { "label": "Retro — Joker",            "uiTheme": "vs-dark", "path": "./themes/joker.json" },
+      { "label": "Retro — Marley",           "uiTheme": "vs-dark", "path": "./themes/marley.json" },
+      { "label": "Retro — Lenseflare",       "uiTheme": "vs-dark", "path": "./themes/lenseflare.json" },
+      { "label": "Retro — Platoon",          "uiTheme": "vs-dark", "path": "./themes/platoon.json" },
+      { "label": "Retro — Corleone",         "uiTheme": "vs-dark", "path": "./themes/corleone.json" },
+      { "label": "Retro — Golden Brown",     "uiTheme": "vs-dark", "path": "./themes/golden-brown.json" }
     ]
   }
 }

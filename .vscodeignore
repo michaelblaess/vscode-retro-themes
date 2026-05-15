@@ -1,0 +1,7 @@
+.git/**
+.gitattributes
+.vscodeignore
+__pycache__/**
+generate-themes.py
+docs/flags/*.svg
+*.vsix

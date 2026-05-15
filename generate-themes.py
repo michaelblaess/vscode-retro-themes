@@ -377,7 +377,7 @@ def build_token_colors(fg, accent, primary, secondary, warning, error, success,
     ]
 
 
-# ── Theme-Definitionen (mirror von textual-themes 0.5) ────────────────
+# ── Theme-Definitionen (mirror von textual-themes 0.8) ────────────────
 # Reihenfolge: (slug, display_name, dark, palette)
 # palette keys: primary, secondary, accent, foreground, background,
 #               surface, panel, warning, error, success
@@ -537,6 +537,41 @@ THEMES = [
         "primary": "#D71920", "secondary": "#1F75FE", "accent": "#1F75FE",
         "foreground": "#FFFFFF", "background": "#0E1A3A", "surface": "#1A2C5F",
         "panel": "#070D24", "warning": "#FFA830", "error": "#C80A18", "success": "#4AA85A",
+    }),
+    ("ascot", "Retro — Ascot", True, {
+        "primary": "#F2C200", "secondary": "#C0C5CC", "accent": "#F2C200",
+        "foreground": "#F5EBD2", "background": "#173E2D", "surface": "#1F4E3A",
+        "panel": "#0E2C1E", "warning": "#F2C200", "error": "#C81E2A", "success": "#2E7D52",
+    }),
+    ("joker", "Retro — Joker", True, {
+        "primary": "#7B3FB2", "secondary": "#2FCC2F", "accent": "#FFC72C",
+        "foreground": "#F5F0E5", "background": "#0E0824", "surface": "#1F0F3F",
+        "panel": "#2D1758", "warning": "#FFC72C", "error": "#DC4040", "success": "#2FCC2F",
+    }),
+    ("marley", "Retro — Marley", True, {
+        "primary": "#078930", "secondary": "#DA121A", "accent": "#FCDD09",
+        "foreground": "#F5EFD8", "background": "#0C0A06", "surface": "#181818",
+        "panel": "#050505", "warning": "#FCDD09", "error": "#DA121A", "success": "#078930",
+    }),
+    ("lenseflare", "Retro — Lenseflare", True, {
+        "primary": "#FF8C42", "secondary": "#2BD0E0", "accent": "#E5283A",
+        "foreground": "#F0E5D2", "background": "#0A1226", "surface": "#14213D",
+        "panel": "#060B18", "warning": "#FFB838", "error": "#E5283A", "success": "#2BD0E0",
+    }),
+    ("platoon", "Retro — Platoon", True, {
+        "primary": "#9AA04A", "secondary": "#6F8A3C", "accent": "#C7B06A",
+        "foreground": "#E4E0CF", "background": "#12130B", "surface": "#22241A",
+        "panel": "#3A3D22", "warning": "#E0B330", "error": "#BF3B2A", "success": "#6F9A4A",
+    }),
+    ("corleone", "Retro — Corleone", True, {
+        "primary": "#A88B52", "secondary": "#4A4E58", "accent": "#9A8147",
+        "foreground": "#C3C0B4", "background": "#0B0C0E", "surface": "#16181C",
+        "panel": "#1F2228", "warning": "#B89043", "error": "#8C2F2F", "success": "#5E7355",
+    }),
+    ("golden-brown", "Retro — Golden Brown", True, {
+        "primary": "#A8843F", "secondary": "#6E4E36", "accent": "#C29A4E",
+        "foreground": "#D5C5A4", "background": "#0F0B07", "surface": "#1C1611",
+        "panel": "#2B2018", "warning": "#BE8F39", "error": "#9A2B2B", "success": "#5F6B42",
     }),
 ]
 
