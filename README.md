@@ -1,5 +1,12 @@
 # Retro Themes for VS Code
 
+<p align="center">
+  <img src="docs/flags/gb.svg" height="13" alt=""> <b>English</b> ·
+  <img src="docs/flags/de.svg" height="13" alt=""> <a href="README.de.md">Deutsch</a>
+</p>
+
+---
+
 [![Stars](https://img.shields.io/github/stars/michaelblaess/vscode-retro-themes?logo=github&logoColor=white&color=fbbf24)](https://github.com/michaelblaess/vscode-retro-themes/stargazers)
 [![Forks](https://img.shields.io/github/forks/michaelblaess/vscode-retro-themes?logo=github&logoColor=white&color=34d399)](https://github.com/michaelblaess/vscode-retro-themes/network/members)
 [![Issues](https://img.shields.io/github/issues/michaelblaess/vscode-retro-themes?logo=github&logoColor=white&color=f87171)](https://github.com/michaelblaess/vscode-retro-themes/issues)
