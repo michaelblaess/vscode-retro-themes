@@ -7,6 +7,10 @@
 
 ---
 
+<p align="center">
+  <img src="docs/banner.jpg" alt="vscode-retro-themes - fünf Editorfenster in verschiedenen Retro-Farbschemata" width="100%">
+</p>
+
 [![Stars](https://img.shields.io/github/stars/michaelblaess/vscode-retro-themes?logo=github&logoColor=white&color=fbbf24)](https://github.com/michaelblaess/vscode-retro-themes/stargazers)
 [![Forks](https://img.shields.io/github/forks/michaelblaess/vscode-retro-themes?logo=github&logoColor=white&color=34d399)](https://github.com/michaelblaess/vscode-retro-themes/network/members)
 [![Issues](https://img.shields.io/github/issues/michaelblaess/vscode-retro-themes?logo=github&logoColor=white&color=f87171)](https://github.com/michaelblaess/vscode-retro-themes/issues)
