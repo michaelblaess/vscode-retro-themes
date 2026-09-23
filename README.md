@@ -19,11 +19,21 @@
 [![Last Commit](https://img.shields.io/github/last-commit/michaelblaess/vscode-retro-themes?logo=git&logoColor=white&color=3b82f6)](https://github.com/michaelblaess/vscode-retro-themes/commits/main)
 [![License](https://img.shields.io/badge/license-Apache_2.0-3b82f6)](LICENSE)
 [![VS Code](https://img.shields.io/badge/vscode-1.70+-3b82f6?logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
-[![Themes](https://img.shields.io/badge/themes-38-fbbf24)](themes)
+[![Themes](https://img.shields.io/badge/themes-41-fbbf24)](themes)
 
-38 color themes for VS Code — vintage 8-bit, terminal phosphor, Unix workstation, watch, comic-pulp, 80s-pastel and mafia-noir palettes.
+41 color themes for VS Code, 36 dark and 5 light — vintage 8-bit, terminal phosphor, Unix workstation, watch, comic-pulp, 80s-pastel and mafia-noir palettes.
 
-This extension is a 1:1 mirror of the [textual-themes](https://github.com/michaelblaess/textual-themes) Python package — same slugs, same display names, same colors. Use the same theme in your terminal TUI apps and your editor.
+The palettes come from the [textual-themes](https://github.com/michaelblaess/textual-themes) Python package, the derivation is shared with [nvim-retro-themes](https://github.com/michaelblaess/nvim-retro-themes). So the same theme looks the same in your terminal TUI apps, in Neovim and in VS Code.
+
+The colours are not copied one to one. A palette made for a TUI has small text fields, an editor is one large text surface. Every colour is therefore checked and lifted until it is readable, and syntax colours that would look alike are pulled apart.
+
+![Retro — Synthwave](docs/vorschau/synthwave.png)
+
+Synthwave on top, below it Classic Terminal and Clipper. **[See all 41 themes](docs/vorschau.md)**
+
+![Retro — Classic Terminal](docs/vorschau/classic-terminal.png)
+
+![Retro — Clipper](docs/vorschau/clipper.png)
 
 > **⚠ Trademark Disclaimer**
 >
@@ -34,7 +44,7 @@ This extension is a 1:1 mirror of the [textual-themes](https://github.com/michae
 > descriptive and not affiliated with, endorsed by, or licensed by the
 > respective trademark owners.
 
-## Dark Themes (33)
+## Dark Themes (36)
 
 | Theme | Style |
 |-------|-------|
@@ -71,6 +81,9 @@ This extension is a 1:1 mirror of the [textual-themes](https://github.com/michae
 | **Platoon** | Muted military olive-drab with khaki accent on near-black |
 | **Corleone** | Cold mafia-noir: bronze, steel-grey and ash on bluish black |
 | **Golden Brown** | Warm mafia-noir: antique gold, sepia and parchment on warm black |
+| **Goldrunner** | Gold on a violet city skyline, 16-bit era |
+| **Hercules** | Amber phosphor monochrome |
+| **Christophorus** | Navy with gold keywords and cyan functions |
 
 ## Light Themes (5)
 
@@ -90,17 +103,37 @@ This extension is a 1:1 mirror of the [textual-themes](https://github.com/michae
 git clone https://github.com/michaelblaess/vscode-retro-themes.git
 cd vscode-retro-themes
 npx @vscode/vsce package --no-dependencies
-code --install-extension retro-themes-1.0.0.vsix --force
+code --install-extension retro-themes-*.vsix --force
 ```
 
 After installation, open the Command Palette (`Ctrl+Shift+P`) and select **Preferences: Color Theme**, then choose any theme starting with **Retro —**.
 
+## The rules behind the colours
+
+- **Readable first.** Text and syntax reach a contrast of at least 4.5:1 on the editor, the
+  current line and the hover windows, line numbers at least 3:1. Hue and saturation stay, so a
+  theme keeps its character.
+- **The surface moves away from the text.** Where a palette sits too close to its own text, a dark
+  theme gets darker and a light one lighter, until the body text reaches 8:1.
+- **Syntax colours stay apart**, from each other and from the body text: at least 22 in CIE76.
+  Where a palette runs out of colours, the next one is taken from the same palette, first a shift
+  in lightness, then another palette colour, then a shift in hue.
+- **Text on coloured surfaces** such as buttons, badges and the status bar always takes the
+  colour with the highest contrast, never a fixed white.
+
+Every rule is covered by a test over all 41 themes, run against the finished JSON the way VS Code
+reads it.
+
 ## Regenerating themes
 
-The `themes/*.json` files are generated from `generate-themes.py` — that script holds all 38 palettes in one place and emits the VS Code JSON. To tweak a color or add a theme: edit `THEMES` in the script, run `python generate-themes.py`, and the JSON files get rewritten in-place (and any obsolete file is removed).
+The `themes/*.json` files and the theme list in `package.json` are generated. The palettes live in
+`src/vscode_retro_themes/data/`, a snapshot of textual-themes 0.14.0, the derivation in
+`derive.py`, the mapping onto VS Code in `render.py`.
 
 ```bash
-python generate-themes.py
+uv run python -m vscode_retro_themes            # write themes/ and package.json
+uv run python -m vscode_retro_themes --report   # contrast table only
+uv run --extra dev pytest                       # check every theme
 ```
 
 ## Companion package

@@ -19,11 +19,21 @@
 [![Last Commit](https://img.shields.io/github/last-commit/michaelblaess/vscode-retro-themes?logo=git&logoColor=white&color=3b82f6)](https://github.com/michaelblaess/vscode-retro-themes/commits/main)
 [![License](https://img.shields.io/badge/license-Apache_2.0-3b82f6)](LICENSE)
 [![VS Code](https://img.shields.io/badge/vscode-1.70+-3b82f6?logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
-[![Themes](https://img.shields.io/badge/themes-38-fbbf24)](themes)
+[![Themes](https://img.shields.io/badge/themes-41-fbbf24)](themes)
 
-38 Farb-Themes für VS Code — Paletten im Stil von Vintage-8-Bit, Terminal-Phosphor, Unix-Workstation, Armbanduhren, Comic-Pulp, 80er-Pastell und Mafia-Noir.
+41 Farb-Themes für VS Code, 36 dunkle und 5 helle — Paletten im Stil von Vintage-8-Bit, Terminal-Phosphor, Unix-Workstation, Armbanduhren, Comic-Pulp, 80er-Pastell und Mafia-Noir.
 
-Diese Erweiterung ist ein 1:1-Abbild des Python-Pakets [textual-themes](https://github.com/michaelblaess/textual-themes) — gleiche Slugs, gleiche Anzeigenamen, gleiche Farben. So nutzt du dasselbe Theme in deinen Terminal-TUI-Apps und in deinem Editor.
+Die Paletten stammen aus dem Python-Paket [textual-themes](https://github.com/michaelblaess/textual-themes), die Ableitung teilt sich die Erweiterung mit [nvim-retro-themes](https://github.com/michaelblaess/nvim-retro-themes). So sieht dasselbe Theme in deinen Terminal-TUI-Apps, in Neovim und in VS Code gleich aus.
+
+Die Farben sind nicht eins zu eins übernommen. Eine Palette für eine TUI hat kleine Textfelder, ein Editor ist eine einzige große Textfläche. Jede Farbe wird deshalb geprüft und angehoben, bis sie lesbar ist, und Syntaxfarben, die sich ähneln würden, werden auseinandergezogen.
+
+![Retro — Synthwave](docs/vorschau/synthwave.png)
+
+Oben Synthwave, darunter Classic Terminal und Clipper. **[Alle 41 Themes ansehen](docs/vorschau.de.md)**
+
+![Retro — Classic Terminal](docs/vorschau/classic-terminal.png)
+
+![Retro — Clipper](docs/vorschau/clipper.png)
 
 > **⚠ Markenrechtlicher Hinweis**
 >
@@ -35,7 +45,7 @@ Diese Erweiterung ist ein 1:1-Abbild des Python-Pakets [textual-themes](https://
 > den jeweiligen Markeninhabern, wird von ihnen nicht unterstützt und ist
 > nicht von ihnen lizenziert.
 
-## Dunkle Themes (33)
+## Dunkle Themes (36)
 
 | Theme | Stil |
 |-------|------|
@@ -72,6 +82,9 @@ Diese Erweiterung ist ein 1:1-Abbild des Python-Pakets [textual-themes](https://
 | **Platoon** | Gedämpftes Militär-Olivgrün mit Khaki-Akzent auf Fast-Schwarz |
 | **Corleone** | Kühles Mafia-Noir: Bronze, Stahlgrau und Asche auf bläulichem Schwarz |
 | **Golden Brown** | Warmes Mafia-Noir: Antikgold, Sepia und Pergament auf warmem Schwarz |
+| **Goldrunner** | Gold über einer violetten Stadtsilhouette, 16-Bit-Ära |
+| **Hercules** | Bernsteinfarbener Phosphor, einfarbig |
+| **Christophorus** | Marineblau mit goldenen Schlüsselwörtern und cyanfarbenen Funktionen |
 
 ## Helle Themes (5)
 
@@ -91,17 +104,36 @@ Diese Erweiterung ist ein 1:1-Abbild des Python-Pakets [textual-themes](https://
 git clone https://github.com/michaelblaess/vscode-retro-themes.git
 cd vscode-retro-themes
 npx @vscode/vsce package --no-dependencies
-code --install-extension retro-themes-1.0.0.vsix --force
+code --install-extension retro-themes-*.vsix --force
 ```
 
 Öffne nach der Installation die Befehlspalette (`Ctrl+Shift+P`), wähle **Preferences: Color Theme** und dann ein beliebiges Theme, das mit **Retro —** beginnt.
 
+## Die Regeln hinter den Farben
+
+- **Lesbarkeit zuerst.** Text und Syntax erreichen auf dem Editor, der aktuellen Zeile und in den
+  schwebenden Fenstern mindestens 4,5:1, Zeilennummern mindestens 3:1. Farbton und Sättigung
+  bleiben, das Theme behält also seinen Charakter.
+- **Die Fläche rückt vom Text ab.** Liegt eine Palette zu nah an ihrer eigenen Schrift, wird ein
+  dunkles Theme dunkler und ein helles heller, bis der Fließtext 8:1 erreicht.
+- **Syntaxfarben bleiben unterscheidbar**, untereinander und zum Fließtext: mindestens 22 in
+  CIE76. Gehen einer Palette die Farben aus, wird zuerst die Helligkeit verschoben, dann eine
+  andere Farbe derselben Palette genommen und erst zuletzt der Farbton gedreht.
+- **Schrift auf farbigen Flächen** wie Knöpfen, Badges und der Statusleiste nimmt immer die Farbe
+  mit dem höchsten Kontrast, nie pauschal Weiß.
+
+Jede Regel prüft ein Test über alle 41 Themes, und zwar am fertigen JSON, so wie VS Code es liest.
+
 ## Themes neu generieren
 
-Die `themes/*.json`-Dateien werden aus `generate-themes.py` generiert — dieses Skript hält alle 38 Paletten an einer Stelle und gibt das VS-Code-JSON aus. Um eine Farbe anzupassen oder ein Theme hinzuzufügen: bearbeite `THEMES` im Skript, führe `python generate-themes.py` aus, und die JSON-Dateien werden direkt überschrieben (und jede veraltete Datei wird entfernt).
+Die Dateien `themes/*.json` und die Themeliste in der `package.json` werden erzeugt. Die Paletten
+liegen in `src/vscode_retro_themes/data/`, einem Snapshot von textual-themes 0.14.0, die Ableitung
+in `derive.py`, die Abbildung auf VS Code in `render.py`.
 
 ```bash
-python generate-themes.py
+uv run python -m vscode_retro_themes            # themes/ und package.json schreiben
+uv run python -m vscode_retro_themes --report   # nur die Kontrasttabelle
+uv run --extra dev pytest                       # jedes Theme prüfen
 ```
 
 ## Begleitpaket
