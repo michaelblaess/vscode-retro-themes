@@ -2,7 +2,12 @@
   "name": "retro-themes",
   "displayName": "Retro Themes",
   "description": "41 retro color themes for VS Code, 36 dark and 5 light, derived from the textual-themes palettes and checked for readable contrast.",
-  "version": "2.0.0",
+  "icon": "docs/icon.png",
+  "galleryBanner": {
+    "color": "#0b0e12",
+    "theme": "dark"
+  },
+  "version": "2.0.1",
   "publisher": "michaelblaess",
   "author": {
     "name": "Michael Blaess"
@@ -11,6 +16,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/michaelblaess/vscode-retro-themes"
+  },
+  "homepage": "https://github.com/michaelblaess/vscode-retro-themes#readme",
+  "bugs": {
+    "url": "https://github.com/michaelblaess/vscode-retro-themes/issues"
   },
   "engines": {
     "vscode": "^1.70.0"
