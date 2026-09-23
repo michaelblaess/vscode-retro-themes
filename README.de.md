@@ -20,6 +20,7 @@
 [![License](https://img.shields.io/badge/license-Apache_2.0-3b82f6)](LICENSE)
 [![VS Code](https://img.shields.io/badge/vscode-1.70+-3b82f6?logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 [![Themes](https://img.shields.io/badge/themes-41-fbbf24)](themes)
+[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/michaelblaess.retro-themes?label=marketplace&logo=visualstudiocode&logoColor=white&color=3b82f6)](https://marketplace.visualstudio.com/items?itemName=michaelblaess.retro-themes)
 
 41 Farb-Themes für VS Code, 36 dunkle und 5 helle — Paletten im Stil von Vintage-8-Bit, Terminal-Phosphor, Unix-Workstation, Armbanduhren, Comic-Pulp, 80er-Pastell und Mafia-Noir.
 
@@ -97,6 +98,26 @@ Oben Synthwave, darunter Classic Terminal und Clipper. **[Alle 41 Themes ansehen
 | **Clipper** | Globusblau auf Elfenbein — Jet-Age-Lackierung |
 
 ## Installation
+
+### Aus dem Marketplace
+
+Öffne in VS Code die Erweiterungen (`Ctrl+Shift+X`), suche nach **Retro Themes** von Michael
+Blaess und installiere sie, oder im Terminal:
+
+```bash
+code --install-extension michaelblaess.retro-themes
+```
+
+Die Seite im Marketplace: [marketplace.visualstudio.com](https://marketplace.visualstudio.com/items?itemName=michaelblaess.retro-themes).
+
+### Aus einem Release
+
+Jedes [Release](https://github.com/michaelblaess/vscode-retro-themes/releases) enthält die
+`.vsix`-Datei:
+
+```bash
+code --install-extension retro-themes-2.0.1.vsix --force
+```
 
 ### Aus dem Quellcode
 
